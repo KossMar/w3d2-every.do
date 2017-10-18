@@ -31,7 +31,7 @@
     _priorityLabel.text = [NSString stringWithFormat:@"%i", self.toDoObject.priorityNumber];
     _descriptionLabel.text = self.toDoObject.toDoDescription;
     _completedLabel.text = [NSString stringWithFormat:@"%@", self.toDoObject.isCompleted ? @"YES" : @"NO"];
-
+    
     
 }
 

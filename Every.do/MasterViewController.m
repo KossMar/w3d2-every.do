@@ -37,6 +37,14 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    UISwipeGestureRecognizer *swipeDone = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(markItemDone:)];
+    [swipeDone setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.tableView addGestureRecognizer:swipeDone];
+    
+    
+
+    
 }
 
 
@@ -54,9 +62,54 @@
     if (!self.objects) {
         self.objects = [[NSMutableArray alloc] init];
     }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+
+//
+//    [self.objects insertObject:[NSDate date] atIndex:0];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+    {
+        
+        UIAlertController* alert;
+        alert = [UIAlertController alertControllerWithTitle:@"Add"
+                                                   message:@"Enter new item"
+                                            preferredStyle:UIAlertControllerStyleAlert];
+        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            textField.placeholder = @"name";
+            textField.font = [UIFont systemFontOfSize:22];
+            textField.textAlignment = NSTextAlignmentCenter;
+        }];
+        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            textField.placeholder = @"priority";
+            textField.font = [UIFont systemFontOfSize:22];
+            textField.textAlignment = NSTextAlignmentCenter;
+        }];
+        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            textField.placeholder = @"description";
+            textField.font = [UIFont systemFontOfSize:22];
+            textField.textAlignment = NSTextAlignmentCenter;
+        }];
+        
+        
+        [alert addAction:[UIAlertAction actionWithTitle:@"Ok"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction * _Nonnull action) {
+                                                    ToDo *newToDo = [[ToDo alloc]init];
+                                                    newToDo.name = alert.textFields[0].text;
+                                                    newToDo.priorityNumber = [alert.textFields[1].text intValue];
+                                                    newToDo.toDoDescription = alert.textFields[2].text;
+                                                    newToDo.isCompleted = NO;
+                              [self.objects addObject:newToDo];
+                              [self.tableView reloadData];
+                          }]];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel"
+                                                         style:UIAlertActionStyleCancel
+                                                       handler:nil];
+        [alert addAction: cancel];
+        [self presentViewController:alert animated:true completion:nil];
+    }
+    
 }
 
 
@@ -107,6 +160,41 @@
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+    }
+}
+
+- (void)markItemDone:(UISwipeGestureRecognizer*)sender {
+    //Get location of the swipe
+    CGPoint location = [sender locationInView:self.tableView];
+    
+    //Get the corresponding index path within the table view
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:location];
+    
+    //Check if index path is valid
+    if(indexPath)
+    {
+        //Get the cell out of the table view
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        
+        ToDo *object = self.objects[indexPath.row];
+        
+        NSMutableAttributedString *attributedNameString = [[NSMutableAttributedString alloc] initWithString:object.name];
+        NSMutableAttributedString *attributedNameStrikeString = [[NSMutableAttributedString alloc] initWithString:object.name];
+        [attributedNameStrikeString addAttribute:NSStrikethroughStyleAttributeName value:@2 range:NSMakeRange(0, [attributedNameString length])];
+        
+        
+        if (object.isCompleted == YES){
+            object.isCompleted = NO;
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            cell.textLabel.attributedText = attributedNameString;
+
+        }
+        else {
+            object.isCompleted = YES;
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            cell.textLabel.attributedText = attributedNameStrikeString;
+        }
+        
     }
 }
 
