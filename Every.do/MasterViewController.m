@@ -43,8 +43,6 @@
     [self.tableView addGestureRecognizer:swipeDone];
     
     
-
-    
 }
 
 
@@ -100,6 +98,7 @@
                                                     newToDo.priorityNumber = [alert.textFields[1].text intValue];
                                                     newToDo.toDoDescription = alert.textFields[2].text;
                                                     newToDo.isCompleted = NO;
+
                               [self.objects addObject:newToDo];
                               [self.tableView reloadData];
                           }]];
@@ -144,6 +143,7 @@
     ToDo *object = self.objects[indexPath.row];
     cell.textLabel.text = [object.name stringByAppendingString:[NSString stringWithFormat:@" (%i)", object.priorityNumber]];
     cell.detailTextLabel.text = object.toDoDescription;
+    cell.showsReorderControl = YES;
     return cell;
 }
 
@@ -198,6 +198,21 @@
     }
 }
 
+//-(void)setEditing:(BOOL)editing animated:(BOOL)animated {
+//    [super setEditing:<#editing#> animated:<#animated#>];
+//    [self tableView:self.tableView canMoveRowAtIndexPath:];
+//}
 
+-(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    ToDo *objectToMove = [self.objects objectAtIndex:sourceIndexPath.row];
+    [self.objects removeObjectAtIndex:sourceIndexPath.row];
+    [self.objects insertObject:objectToMove atIndex:destinationIndexPath.row];
+    [tableView reloadData];
+}
+
+-(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return YES;
+}
 
 @end

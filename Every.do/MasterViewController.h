@@ -12,6 +12,8 @@
 
 @interface MasterViewController : UITableViewController
 
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated;
+
 
 @end
 
