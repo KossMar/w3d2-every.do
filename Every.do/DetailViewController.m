@@ -39,10 +39,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+
+    [self.setDeadLine setMinimumDate:[NSDate date]];
+    
     [self configureView];
 
 
 }
+
+
+    
 
 
 

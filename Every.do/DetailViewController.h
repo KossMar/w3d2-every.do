@@ -11,11 +11,12 @@
 
 @interface DetailViewController : UIViewController
 
+
+@property (weak, nonatomic) IBOutlet UIDatePicker *setDeadLine;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priorityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *completedLabel;
-
 @property (nonatomic) ToDo *toDoObject;
 
 
