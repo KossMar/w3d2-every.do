@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ToDo.h"
+#import "Every.do-add-coredata+CoreDataModel.h"
+
 
 @interface DetailViewController : UIViewController
 
@@ -17,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *priorityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *completedLabel;
-@property (nonatomic) ToDo *toDoObject;
+@property (strong, nonatomic) ToDo *detailItem;
 
 
 @end

@@ -7,12 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "Every.do-add-coredata+CoreDataModel.h"
+//#import "ToDo.h"
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
--(void)setEditing:(BOOL)editing animated:(BOOL)animated;
+@property DetailViewController *detailViewController;
+
+@property (strong, nonatomic) NSFetchedResultsController<ToDo *> *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+
 
 
 @end

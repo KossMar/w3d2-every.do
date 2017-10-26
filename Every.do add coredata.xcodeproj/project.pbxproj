@@ -16,7 +16,9 @@
 		0D0727BF1F9687B100C195A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0727BE1F9687B100C195A3 /* main.m */; };
 		0D0727C91F9687B100C195A3 /* Every_doTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0727C81F9687B100C195A3 /* Every_doTests.m */; };
 		0D0727D41F9687B100C195A3 /* Every_doUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0727D31F9687B100C195A3 /* Every_doUITests.m */; };
-		0D0727E31F96887100C195A3 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0727E21F96887100C195A3 /* ToDo.m */; };
+		0D5CA48F1FA137E600267757 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5CA48E1FA137E600267757 /* CoreData.framework */; };
+		0D5CA4931FA138B000267757 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5CA4921FA138B000267757 /* CoreDataHelper.m */; };
+		0D5CA4961FA15F4800267757 /* Every.do-add-coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D5CA4941FA15F4700267757 /* Every.do-add-coredata.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D0727A91F9687B100C195A3 /* Every.do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Every.do.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D0727A91F9687B100C195A3 /* Every.do add coredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Every.do add coredata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0727AC1F9687B100C195A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0D0727AD1F9687B100C195A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0D0727AF1F9687B100C195A3 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
@@ -49,14 +51,16 @@
 		0D0727BB1F9687B100C195A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D0727BD1F9687B100C195A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D0727BE1F9687B100C195A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0D0727C41F9687B100C195A3 /* Every.doTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Every.doTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D0727C41F9687B100C195A3 /* Every.do add coredataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Every.do add coredataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0727C81F9687B100C195A3 /* Every_doTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Every_doTests.m; sourceTree = "<group>"; };
 		0D0727CA1F9687B100C195A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D0727CF1F9687B100C195A3 /* Every.doUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Every.doUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D0727CF1F9687B100C195A3 /* Every.do add coredataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Every.do add coredataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0727D31F9687B100C195A3 /* Every_doUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Every_doUITests.m; sourceTree = "<group>"; };
 		0D0727D51F9687B100C195A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D0727E11F96887100C195A3 /* ToDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
-		0D0727E21F96887100C195A3 /* ToDo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
+		0D5CA48E1FA137E600267757 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0D5CA4911FA138B000267757 /* CoreDataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		0D5CA4921FA138B000267757 /* CoreDataHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		0D5CA4951FA15F4700267757 /* Every.do-add-coredata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Every.do-add-coredata.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5CA48F1FA137E600267757 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,15 +96,16 @@
 				0D0727C71F9687B100C195A3 /* Every.doTests */,
 				0D0727D21F9687B100C195A3 /* Every.doUITests */,
 				0D0727AA1F9687B100C195A3 /* Products */,
+				0D5CA48D1FA137E500267757 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		0D0727AA1F9687B100C195A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0D0727A91F9687B100C195A3 /* Every.do.app */,
-				0D0727C41F9687B100C195A3 /* Every.doTests.xctest */,
-				0D0727CF1F9687B100C195A3 /* Every.doUITests.xctest */,
+				0D0727A91F9687B100C195A3 /* Every.do add coredata.app */,
+				0D0727C41F9687B100C195A3 /* Every.do add coredataTests.xctest */,
+				0D0727CF1F9687B100C195A3 /* Every.do add coredataUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,15 +113,15 @@
 		0D0727AB1F9687B100C195A3 /* Every.do */ = {
 			isa = PBXGroup;
 			children = (
+				0D5CA4901FA1383D00267757 /* Generic Core Data Classes */,
 				0D0727AC1F9687B100C195A3 /* AppDelegate.h */,
 				0D0727AD1F9687B100C195A3 /* AppDelegate.m */,
 				0D0727AF1F9687B100C195A3 /* MasterViewController.h */,
 				0D0727B01F9687B100C195A3 /* MasterViewController.m */,
 				0D0727B21F9687B100C195A3 /* DetailViewController.h */,
 				0D0727B31F9687B100C195A3 /* DetailViewController.m */,
-				0D0727E11F96887100C195A3 /* ToDo.h */,
-				0D0727E21F96887100C195A3 /* ToDo.m */,
 				0D0727B51F9687B100C195A3 /* Main.storyboard */,
+				0D5CA4941FA15F4700267757 /* Every.do-add-coredata.xcdatamodeld */,
 				0D0727B81F9687B100C195A3 /* Assets.xcassets */,
 				0D0727BA1F9687B100C195A3 /* LaunchScreen.storyboard */,
 				0D0727BD1F9687B100C195A3 /* Info.plist */,
@@ -142,12 +148,29 @@
 			path = Every.doUITests;
 			sourceTree = "<group>";
 		};
+		0D5CA48D1FA137E500267757 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D5CA48E1FA137E600267757 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D5CA4901FA1383D00267757 /* Generic Core Data Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0D5CA4911FA138B000267757 /* CoreDataHelper.h */,
+				0D5CA4921FA138B000267757 /* CoreDataHelper.m */,
+			);
+			path = "Generic Core Data Classes";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0D0727A81F9687B100C195A3 /* Every.do */ = {
+		0D0727A81F9687B100C195A3 /* Every.do add coredata */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D0727D81F9687B100C195A3 /* Build configuration list for PBXNativeTarget "Every.do" */;
+			buildConfigurationList = 0D0727D81F9687B100C195A3 /* Build configuration list for PBXNativeTarget "Every.do add coredata" */;
 			buildPhases = (
 				0D0727A51F9687B100C195A3 /* Sources */,
 				0D0727A61F9687B100C195A3 /* Frameworks */,
@@ -157,14 +180,14 @@
 			);
 			dependencies = (
 			);
-			name = Every.do;
+			name = "Every.do add coredata";
 			productName = Every.do;
-			productReference = 0D0727A91F9687B100C195A3 /* Every.do.app */;
+			productReference = 0D0727A91F9687B100C195A3 /* Every.do add coredata.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0D0727C31F9687B100C195A3 /* Every.doTests */ = {
+		0D0727C31F9687B100C195A3 /* Every.do add coredataTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D0727DB1F9687B100C195A3 /* Build configuration list for PBXNativeTarget "Every.doTests" */;
+			buildConfigurationList = 0D0727DB1F9687B100C195A3 /* Build configuration list for PBXNativeTarget "Every.do add coredataTests" */;
 			buildPhases = (
 				0D0727C01F9687B100C195A3 /* Sources */,
 				0D0727C11F9687B100C195A3 /* Frameworks */,
@@ -175,14 +198,14 @@
 			dependencies = (
 				0D0727C61F9687B100C195A3 /* PBXTargetDependency */,
 			);
-			name = Every.doTests;
+			name = "Every.do add coredataTests";
 			productName = Every.doTests;
-			productReference = 0D0727C41F9687B100C195A3 /* Every.doTests.xctest */;
+			productReference = 0D0727C41F9687B100C195A3 /* Every.do add coredataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0D0727CE1F9687B100C195A3 /* Every.doUITests */ = {
+		0D0727CE1F9687B100C195A3 /* Every.do add coredataUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D0727DE1F9687B100C195A3 /* Build configuration list for PBXNativeTarget "Every.doUITests" */;
+			buildConfigurationList = 0D0727DE1F9687B100C195A3 /* Build configuration list for PBXNativeTarget "Every.do add coredataUITests" */;
 			buildPhases = (
 				0D0727CB1F9687B100C195A3 /* Sources */,
 				0D0727CC1F9687B100C195A3 /* Frameworks */,
@@ -193,9 +216,9 @@
 			dependencies = (
 				0D0727D11F9687B100C195A3 /* PBXTargetDependency */,
 			);
-			name = Every.doUITests;
+			name = "Every.do add coredataUITests";
 			productName = Every.doUITests;
-			productReference = 0D0727CF1F9687B100C195A3 /* Every.doUITests.xctest */;
+			productReference = 0D0727CF1F9687B100C195A3 /* Every.do add coredataUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -204,6 +227,9 @@
 		0D0727A11F9687B100C195A3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Mar Koss";
 				TargetAttributes = {
@@ -223,7 +249,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0D0727A41F9687B100C195A3 /* Build configuration list for PBXProject "Every.do" */;
+			buildConfigurationList = 0D0727A41F9687B100C195A3 /* Build configuration list for PBXProject "Every.do add coredata" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -236,9 +262,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0D0727A81F9687B100C195A3 /* Every.do */,
-				0D0727C31F9687B100C195A3 /* Every.doTests */,
-				0D0727CE1F9687B100C195A3 /* Every.doUITests */,
+				0D0727A81F9687B100C195A3 /* Every.do add coredata */,
+				0D0727C31F9687B100C195A3 /* Every.do add coredataTests */,
+				0D0727CE1F9687B100C195A3 /* Every.do add coredataUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -275,7 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D0727E31F96887100C195A3 /* ToDo.m in Sources */,
+				0D5CA4961FA15F4800267757 /* Every.do-add-coredata.xcdatamodeld in Sources */,
+				0D5CA4931FA138B000267757 /* CoreDataHelper.m in Sources */,
 				0D0727B11F9687B100C195A3 /* MasterViewController.m in Sources */,
 				0D0727AE1F9687B100C195A3 /* AppDelegate.m in Sources */,
 				0D0727BF1F9687B100C195A3 /* main.m in Sources */,
@@ -304,12 +331,12 @@
 /* Begin PBXTargetDependency section */
 		0D0727C61F9687B100C195A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0D0727A81F9687B100C195A3 /* Every.do */;
+			target = 0D0727A81F9687B100C195A3 /* Every.do add coredata */;
 			targetProxy = 0D0727C51F9687B100C195A3 /* PBXContainerItemProxy */;
 		};
 		0D0727D11F9687B100C195A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0D0727A81F9687B100C195A3 /* Every.do */;
+			target = 0D0727A81F9687B100C195A3 /* Every.do add coredata */;
 			targetProxy = 0D0727D01F9687B100C195A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -474,7 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.markoss.Every-doTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Every.do.app/Every.do";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Every.do add coredata.app/Every.do add coredata";
 			};
 			name = Debug;
 		};
@@ -488,7 +515,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.markoss.Every-doTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Every.do.app/Every.do";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Every.do add coredata.app/Every.do add coredata";
 			};
 			name = Release;
 		};
@@ -521,7 +548,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0D0727A41F9687B100C195A3 /* Build configuration list for PBXProject "Every.do" */ = {
+		0D0727A41F9687B100C195A3 /* Build configuration list for PBXProject "Every.do add coredata" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D0727D61F9687B100C195A3 /* Debug */,
@@ -530,7 +557,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D0727D81F9687B100C195A3 /* Build configuration list for PBXNativeTarget "Every.do" */ = {
+		0D0727D81F9687B100C195A3 /* Build configuration list for PBXNativeTarget "Every.do add coredata" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D0727D91F9687B100C195A3 /* Debug */,
@@ -539,7 +566,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D0727DB1F9687B100C195A3 /* Build configuration list for PBXNativeTarget "Every.doTests" */ = {
+		0D0727DB1F9687B100C195A3 /* Build configuration list for PBXNativeTarget "Every.do add coredataTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D0727DC1F9687B100C195A3 /* Debug */,
@@ -548,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D0727DE1F9687B100C195A3 /* Build configuration list for PBXNativeTarget "Every.doUITests" */ = {
+		0D0727DE1F9687B100C195A3 /* Build configuration list for PBXNativeTarget "Every.do add coredataUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D0727DF1F9687B100C195A3 /* Debug */,
@@ -558,6 +585,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0D5CA4941FA15F4700267757 /* Every.do-add-coredata.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0D5CA4951FA15F4700267757 /* Every.do-add-coredata.xcdatamodel */,
+			);
+			currentVersion = 0D5CA4951FA15F4700267757 /* Every.do-add-coredata.xcdatamodel */;
+			path = "Every.do-add-coredata.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0D0727A11F9687B100C195A3 /* Project object */;
 }
